@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; 
+use App\Http\Controllers\Users;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,14 +18,14 @@ Route::get('/', function () {
     return view('sample');
 });
  
-Route::get('/sample/{id}',function ($id) {
-  echo $id;
-  return view('sample');
-});
+// Route::get('/sample/{id}',function ($id) {
+//   echo $id;
+//   return view('sample');
+// });
 
 
 // Route::get('/sample/dashboard', 'HomeController@dashboard');
 
-Route::get('/sample/dashboard', [HomeController::class, 'dashboard']);
+// Route::get('/sample/dashboard', [HomeController::class, 'dashboard']);
 
-
+Route::get('/process', [users::class, 'index']);
