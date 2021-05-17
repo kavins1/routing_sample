@@ -9,7 +9,7 @@ class users extends Controller
     //
   public function index()
   {
-    //   echo "code will be here";
+      echo "code will be here";
     return user::all();
   }
 }
